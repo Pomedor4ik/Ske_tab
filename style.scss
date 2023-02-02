@@ -1,0 +1,519 @@
+$colorPanel: #F4F7FC;
+@mixin btn($width, $color){
+    width: $width;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    background: $color;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: white;
+}
+@mixin flexElement($justify,$align){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+@mixin panelText($weight,$color){
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: $weight;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $color;
+}
+.upl {
+    width: 20px;
+    height: 18px;
+}
+.jpg {
+    width: 20px;
+    height: 18px;
+}
+.plus {
+    background: #913E98;
+    width: 20px;
+    height: 20px;
+}
+.eye {
+    width: 23px;
+    height: 16px;
+}
+.trush {
+    width: 16px;
+    height: 20px;
+}
+.pen {
+    width: 20px;
+    height: 20px;
+}
+.up-down {
+    width: 8px;
+    height: 11px;
+}
+body{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    main{
+        .files{
+            width: 1200px;
+            height: 800px;
+            border: 1px solid black;
+            filter: drop-shadow(0px 3px 6px rgba(75, 81, 91, 0.15)) drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.15));
+            &_panel{
+                width: 100%;
+                height: 159px;
+                background-color: $colorPanel;
+
+                &_upper{
+                    margin-left: 34px;
+                    @include flexElement(flex-start, center);
+                    
+                    width: 100%;
+                    height: 90px;
+                    &_storage{
+                        width: 346px;
+                        height: 30px;
+                        margin-right: 66px;
+                        p {
+                            @include panelText(400, #437FEC)
+                        }
+                    }
+                    &_result{
+                        width: 304px;
+                        @include flexElement(space-around, center);
+                        &_info{
+                            @include panelText(400, #606F89);
+                        }
+                        &_size{
+                            @include panelText(600, #606F89);
+                        }
+                    }
+                    &_inputSize{
+                        @include flexElement(center, center);
+                        width: 87px;
+                        height: 40px;
+                        border-radius: 4px;
+                        background: #DAE1EC;
+                        margin-right: 15px;
+                        input{
+                            width: 29px;
+                            height: 23px;
+                            border: none;
+                            background: none;
+                            &:focus{
+                                outline: none;
+                                border: none;
+                            }
+                        }
+                    }
+                    &_folderBtn{
+                        @include flexElement(flex-start, center);
+                        @include btn(148px, #913E98);
+                        margin-right: 15px;
+                        svg{
+                            margin: 10px;
+                        }
+                    }
+                    &_uploadBtn{
+                        @include flexElement(flex-start, center);
+                        @include btn(148px, #F04438);
+                        svg{
+                            margin: 10px;
+                        }
+                    }
+                }
+                &_down{
+                    @include flexElement(flex-start, center);
+                    width: 100%;
+                    height: 69px;
+                    &_search{
+                        @include flexElement(flex-start, center);
+                        width: 357px;
+                        height: 40px;
+                        background: #DAE1EC;
+                        border-radius: 4px; 
+                        margin-left: 80px;
+                        &_inptSvg{
+                            width: 20px;
+                            height: 20px;
+                            margin: 10px;
+                        }
+                        &_inptP{
+                            width: 245px;
+                            height: 17px;
+                            font-family: 'Inter';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 17px;
+                            border: none;
+                            background: none;
+                            color: rgba(46, 59, 82, 0.33);
+                        }
+                    }
+                    &_btnContainer{
+                        @include flexElement(flex-start, center);
+                        &_btn1{
+                            width: 94px;
+                            height: 40px;
+                            border-radius: 4px;
+                            background: #DAE1EC;
+                            border: none;
+                            margin: 40px;
+                        }
+                        &_btn2{
+                            width: 94px;
+                            height: 40px;
+                            border-radius: 4px;
+                            background: #DAE1EC;
+                            border: none;
+                            margin: 8px;
+                        }
+                        &_btn3{
+                            width: 94px;
+                            height: 40px;
+                            border-radius: 4px;
+                            background: #DAE1EC;
+                            border: none;
+                            margin: 6px;
+                        }
+                        &_btn4{
+                            width: 94px;
+                            height: 40px;
+                            border-radius: 4px;
+                            background: #DAE1EC;
+                            border: none;
+                            margin: 10px;
+                        }
+                        &_btn5{
+                            width: 94px;
+                            height: 40px;
+                            border-radius: 4px;
+                            background: #DAE1EC;
+                            border: none;
+                        }
+                        &_btn6{
+                            width: 94px;
+                            height: 40px;
+                            border-radius: 4px;
+                            background: #455B66;
+                            border: none;
+                            margin: 15px;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// header{
+//     width: 1330px;
+//     height: 350px;
+//     img{
+//         top: 0%;
+//         left: 0%;
+//         width: 100%;
+//         position: absolute;
+//     }
+// }
+// .header-elements{
+//     position: absolute;
+//     display: flex;
+//     justify-content: space-around;
+//     align-items: center;
+//     flex-direction: row;
+//     width: 100%;
+//     margin-top: 2%;
+// }
+// .nav-elements{
+//     width: 376px;
+//     display: flex;
+//     justify-content: space-between;
+// }
+// nav>a{
+//     font-family: 'Comfortaa';
+//     font-style: normal;
+//     font-weight: 700;
+//     font-size: 20px;
+//     line-height: 22px;
+//     text-decoration: none;
+//     color: #FFFFFF;    
+// }
+// .auth{
+//     display: flex;
+//     justify-content: space-around;
+//     width: 282px;
+// }
+// .login{
+//     display: flex;
+//     justify-content: center;
+//     align-items: center; 
+// }
+// .login>a{
+//     font-family: 'Poppins';
+//     font-style: normal;
+//     font-weight: 500;
+//     font-size: 13.4237px;
+//     line-height: 16px;
+//     text-decoration: none;
+//     text-align: center;
+//     letter-spacing: 1.25px;
+//     text-transform: uppercase;
+//     color: #FFFFFF;    
+// }
+// .sign-up{
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     width: 90px; ;
+//     height: 50px;
+//     background: #FFFFFF;
+//     border-radius: 30px;
+// }
+// .sign-up>a{
+//     font-family: 'Poppins';
+//     font-style: normal;
+//     font-weight: 500;
+//     font-size: 13.4237px;
+//     line-height: 16px;
+//     text-decoration: none;
+//     text-align: center;
+//     letter-spacing: 1.25px;
+//     text-transform: uppercase;
+//     color: #BB6DF3;    
+// }
+// .logo{
+//     font-family: 'Comfortaa';
+//     font-style: normal;
+//     font-weight: 700;
+//     font-size: 36px;
+//     line-height: 40px;
+//     text-transform: uppercase;
+//     text-decoration: none;
+//     color: #FFFFFF;    
+// }
+// .nav-elements{
+//     width: 376px;
+//     display: flex;
+//     justify-content: space-between;
+// }
+// nav>a{
+//     font-family: 'Comfortaa';
+//     font-style: normal;
+//     font-weight: 700;
+//     font-size: 20px;
+//     line-height: 22px;
+//     text-decoration: none;
+//     color: #FFFFFF;    
+// }
+// .auth{
+//     display: flex;
+//     justify-content: space-around;
+//     width: 282px;
+// }
+// .login{
+//     display: flex;
+//     justify-content: center;
+//     align-items: center; 
+// }
+// .login>a{
+//     font-family: 'Poppins';
+//     font-style: normal;
+//     font-weight: 500;
+//     font-size: 13.4237px;
+//     line-height: 16px;
+//     text-decoration: none;
+//     text-align: center;
+//     letter-spacing: 1.25px;
+//     text-transform: uppercase;
+//     color: #FFFFFF;    
+// }
+// .sign-up{
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     width: 90px; ;
+//     height: 50px;
+//     background: #FFFFFF;
+//     border-radius: 30px;
+// }
+// .sign-up>a{
+//     font-family: 'Poppins';
+//     font-style: normal;
+//     font-weight: 500;
+//     font-size: 13.4237px;
+//     line-height: 16px;
+//     text-decoration: none;
+//     text-align: center;
+//     letter-spacing: 1.25px;
+//     text-transform: uppercase;
+//     color: #BB6DF3;    
+// }
+
+// main{
+//     width: 100%;
+//     height: 1100px;
+// }
+
+// .title {
+//     text-align: center;
+//     text-transform: uppercase;
+// }
+// .title1 {
+//     // width: 550px;
+//     height: 70px;
+//     font-family: 'Roboto';
+//     font-style: normal;
+//     font-weight: 900;
+//     font-size: 72px;
+//     line-height: 70px;
+//     letter-spacing: 0.405em;
+//     color: #3B668D;
+// }
+// .title2 {
+//     height: 36px;
+//     font-style: normal;
+//     font-weight: 400;
+//     font-size: 24px;
+//     line-height: 150%;
+//     letter-spacing: 0.905em;
+//     text-transform: uppercase;
+//     color: #3B668D;
+//     margin-top: 50px;
+// }
+    
+// table {
+//     width: 80%;
+//     margin: 10px 10%;
+//     border-collapse: collapse;
+// }
+
+
+// .panel1{
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+// }
+
+// .pan1 {
+//     width: 220px;
+//     height: 30px;
+//   }
+  
+// .pan1-p {
+//     font-family: 'Inter';
+//     font-style: normal;
+//     font-weight: 400;
+//     font-size: 12px;
+//     line-height: 15px;
+//     letter-spacing: 0.05em;
+//     text-transform: uppercase;
+//     color: #437FEC;
+//   }
+//   .pan2-p {
+//   font-family: 'Inter';
+//   font-style: normal;
+//   font-weight: 400;
+//   font-size: 12px;
+//   line-height: 15px;
+//   text-align: center;
+//   letter-spacing: 0.05em;
+//   text-transform: uppercase;
+//   color: #606F89;
+  
+//   }
+
+// .btns{
+//     width: 500px;
+//     display: flex;
+//     align-items: center ;
+//     justify-content: space-between;
+//     margin-left: 100px;
+// }
+
+// .btn1{
+//     width: 57px;
+//     height: 40px;
+//     background: #DAE1EC;
+//     border: none;
+//     border-radius: 4px;
+//     padding-left: 43px;
+    
+// }
+
+// .panel1BTN1{
+//     width: 168px;
+//     height: 40px;
+//     background: #913E98;
+//     border-radius: 4px;
+//     border: none;
+//     color: white;
+// }
+
+// .Add-Folder-btnPlus{
+//     display: flex;
+//     padding-left: 20px;
+//     p{
+//         padding-top: 2px;
+//     }
+// }
+
+// .btnPlus{
+//     width: 20px;
+//     height: 20px;
+//     padding-right: 15px;
+// }
+
+// .panel2BTN2{
+//     width: 180px;
+//     height: 40px;
+//     background: #F04438;
+//     border-radius: 4px;
+//     border: none;
+//     color: white;
+// }
+
+// .Upload-File-btnUpl{
+//     display: flex;
+//     padding-left: 20px;
+//     padding-top: 10px;
+// }   
+
+// .btnUpl{
+//     width: 30px;
+//     height: 30px;
+//     padding-right: 10px;
+// }
+
+// table, td {
+//     border: 1px solid black;
+// }
+
+// .greyRow {
+//     background: gray;
+// }
+
+// .files {
+//     &_tdCheck {
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         width: 50px;
+//     }
+//     &_td-type {
+//         width: 150px;
+//     }
+// }
+
