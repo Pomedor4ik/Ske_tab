@@ -1,4 +1,21 @@
 $colorPanel: #F4F7FC;
+
+@mixin input ($margin-left) {
+    width: 94px;
+    height: 40px;
+    background: #DAE1EC;
+    border-radius: 4px;
+    margin-left: $margin-left;
+    border: none;
+    &:focus {
+        outline: none;
+        border: none;
+    }
+}           
+@mixin row($background){
+    height: 45px;
+    background: $background;
+}
 @mixin btn($width, $color){
     width: $width;
     height: 40px;
@@ -66,7 +83,7 @@ body{
     main{
         .files{
             width: 1200px;
-            height: 800px;
+            height: 790px;
             border: 1px solid black;
             filter: drop-shadow(0px 3px 6px rgba(75, 81, 91, 0.15)) drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.15));
             &_panel{
@@ -143,14 +160,15 @@ body{
                         background: #DAE1EC;
                         border-radius: 4px; 
                         margin-left: 80px;
+                        margin-right: 36px;
                         &_inptSvg{
                             width: 20px;
                             height: 20px;
                             margin: 10px;
                         }
                         &_inptP{
-                            width: 245px;
-                            height: 17px;
+                            width: 265px;
+                            height: 30px;
                             font-family: 'Inter';
                             font-style: normal;
                             font-weight: 400;
@@ -164,45 +182,18 @@ body{
                     &_btnContainer{
                         @include flexElement(flex-start, center);
                         &_btn1{
-                            width: 94px;
-                            height: 40px;
-                            border-radius: 4px;
-                            background: #DAE1EC;
-                            border: none;
-                            margin: 40px;
+                            @include input(0px);
                         }
                         &_btn2{
-                            width: 94px;
-                            height: 40px;
-                            border-radius: 4px;
-                            background: #DAE1EC;
-                            border: none;
-                            margin: 8px;
+                            @include input(40px);
                         }
                         &_btn3{
-                            width: 94px;
-                            height: 40px;
-                            border-radius: 4px;
-                            background: #DAE1EC;
-                            border: none;
-                            margin: 6px;
+                            @include input(30px);
                         }
                         &_btn4{
-                            width: 94px;
-                            height: 40px;
-                            border-radius: 4px;
-                            background: #DAE1EC;
-                            border: none;
-                            margin: 10px;
+                            @include input(15px);
                         }
                         &_btn5{
-                            width: 94px;
-                            height: 40px;
-                            border-radius: 4px;
-                            background: #DAE1EC;
-                            border: none;
-                        }
-                        &_btn6{
                             width: 94px;
                             height: 40px;
                             border-radius: 4px;
@@ -210,310 +201,280 @@ body{
                             border: none;
                             margin: 15px;
                             color: white;
+                            margin-right: 12px;
+                            &:focus{
+                                outline: none;
+                                border: none;
+                            }
                         }
                     }
+                }
+            }
+            &_table{
+                width: 100%;
+                
+                tr{
+                    @include flexElement(flex-start, flex-start)
+                }
+                &_greyRow{
+                    @include row(#F4F7FC);
+                }
+                &_greyRow{
+                    @include row(none);
+                }
+            }
+            &_table1{
+                width: 100%;
+                background: #F4F7FC;
+                tr{
+                    @include flexElement(flex-start, flex-start)
+                }
+                &_greyRow{
+                    @include row(#F4F7FC);
+                }
+                &_greyRow{
+                    @include row(none);
                 }
             }
         }
     }
 }
-
-// header{
-//     width: 1330px;
-//     height: 350px;
-//     img{
-//         top: 0%;
-//         left: 0%;
-//         width: 100%;
-//         position: absolute;
-//     }
-// }
-// .header-elements{
-//     position: absolute;
-//     display: flex;
-//     justify-content: space-around;
-//     align-items: center;
-//     flex-direction: row;
-//     width: 100%;
-//     margin-top: 2%;
-// }
-// .nav-elements{
-//     width: 376px;
-//     display: flex;
-//     justify-content: space-between;
-// }
-// nav>a{
-//     font-family: 'Comfortaa';
-//     font-style: normal;
-//     font-weight: 700;
-//     font-size: 20px;
-//     line-height: 22px;
-//     text-decoration: none;
-//     color: #FFFFFF;    
-// }
-// .auth{
-//     display: flex;
-//     justify-content: space-around;
-//     width: 282px;
-// }
-// .login{
-//     display: flex;
-//     justify-content: center;
-//     align-items: center; 
-// }
-// .login>a{
-//     font-family: 'Poppins';
-//     font-style: normal;
-//     font-weight: 500;
-//     font-size: 13.4237px;
-//     line-height: 16px;
-//     text-decoration: none;
-//     text-align: center;
-//     letter-spacing: 1.25px;
-//     text-transform: uppercase;
-//     color: #FFFFFF;    
-// }
-// .sign-up{
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     width: 90px; ;
-//     height: 50px;
-//     background: #FFFFFF;
-//     border-radius: 30px;
-// }
-// .sign-up>a{
-//     font-family: 'Poppins';
-//     font-style: normal;
-//     font-weight: 500;
-//     font-size: 13.4237px;
-//     line-height: 16px;
-//     text-decoration: none;
-//     text-align: center;
-//     letter-spacing: 1.25px;
-//     text-transform: uppercase;
-//     color: #BB6DF3;    
-// }
-// .logo{
-//     font-family: 'Comfortaa';
-//     font-style: normal;
-//     font-weight: 700;
-//     font-size: 36px;
-//     line-height: 40px;
-//     text-transform: uppercase;
-//     text-decoration: none;
-//     color: #FFFFFF;    
-// }
-// .nav-elements{
-//     width: 376px;
-//     display: flex;
-//     justify-content: space-between;
-// }
-// nav>a{
-//     font-family: 'Comfortaa';
-//     font-style: normal;
-//     font-weight: 700;
-//     font-size: 20px;
-//     line-height: 22px;
-//     text-decoration: none;
-//     color: #FFFFFF;    
-// }
-// .auth{
-//     display: flex;
-//     justify-content: space-around;
-//     width: 282px;
-// }
-// .login{
-//     display: flex;
-//     justify-content: center;
-//     align-items: center; 
-// }
-// .login>a{
-//     font-family: 'Poppins';
-//     font-style: normal;
-//     font-weight: 500;
-//     font-size: 13.4237px;
-//     line-height: 16px;
-//     text-decoration: none;
-//     text-align: center;
-//     letter-spacing: 1.25px;
-//     text-transform: uppercase;
-//     color: #FFFFFF;    
-// }
-// .sign-up{
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     width: 90px; ;
-//     height: 50px;
-//     background: #FFFFFF;
-//     border-radius: 30px;
-// }
-// .sign-up>a{
-//     font-family: 'Poppins';
-//     font-style: normal;
-//     font-weight: 500;
-//     font-size: 13.4237px;
-//     line-height: 16px;
-//     text-decoration: none;
-//     text-align: center;
-//     letter-spacing: 1.25px;
-//     text-transform: uppercase;
-//     color: #BB6DF3;    
-// }
-
-// main{
-//     width: 100%;
-//     height: 1100px;
-// }
-
-// .title {
-//     text-align: center;
-//     text-transform: uppercase;
-// }
-// .title1 {
-//     // width: 550px;
-//     height: 70px;
-//     font-family: 'Roboto';
-//     font-style: normal;
-//     font-weight: 900;
-//     font-size: 72px;
-//     line-height: 70px;
-//     letter-spacing: 0.405em;
-//     color: #3B668D;
-// }
-// .title2 {
-//     height: 36px;
-//     font-style: normal;
-//     font-weight: 400;
-//     font-size: 24px;
-//     line-height: 150%;
-//     letter-spacing: 0.905em;
-//     text-transform: uppercase;
-//     color: #3B668D;
-//     margin-top: 50px;
-// }
-    
-// table {
-//     width: 80%;
-//     margin: 10px 10%;
-//     border-collapse: collapse;
-// }
+.td{
+    height: 45px;
+    button{
+        width: 60px;
+        height: 17px;
+        @include flexElement(space-around, center);
+        background: #0A65FF;
+        border-radius: 11px;
+        border: none;
+        color: white;
+    }
+    &_Checkbox{
+        width: 80px;
+        @include flexElement(center, center);
+        input{
+            width: 20px;
+            height: 39px;
+        }
+    }
+    &_type{
+        width: 100px;
+        @include flexElement(center, center);
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        /* identical to box height */
 
 
-// .panel1{
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-// }
+        /* Font/Primary */
 
-// .pan1 {
-//     width: 220px;
-//     height: 30px;
-//   }
-  
-// .pan1-p {
-//     font-family: 'Inter';
-//     font-style: normal;
-//     font-weight: 400;
-//     font-size: 12px;
-//     line-height: 15px;
-//     letter-spacing: 0.05em;
-//     text-transform: uppercase;
-//     color: #437FEC;
-//   }
-//   .pan2-p {
-//   font-family: 'Inter';
-//   font-style: normal;
-//   font-weight: 400;
-//   font-size: 12px;
-//   line-height: 15px;
-//   text-align: center;
-//   letter-spacing: 0.05em;
-//   text-transform: uppercase;
-//   color: #606F89;
-  
-//   }
+        color: #2E3B52;
+    }
+    &_name{
+        width: 318px;
+        @include flexElement(flex-start, center);
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        /* identical to box height */
 
-// .btns{
-//     width: 500px;
-//     display: flex;
-//     align-items: center ;
-//     justify-content: space-between;
-//     margin-left: 100px;
-// }
 
-// .btn1{
-//     width: 57px;
-//     height: 40px;
-//     background: #DAE1EC;
-//     border: none;
-//     border-radius: 4px;
-//     padding-left: 43px;
-    
-// }
+        /* Font/Primary */
 
-// .panel1BTN1{
-//     width: 168px;
-//     height: 40px;
-//     background: #913E98;
-//     border-radius: 4px;
-//     border: none;
-//     color: white;
-// }
+        color: #2E3B52;
+    }
+    &_fileCount{
+        width: 150px;
+        @include flexElement(flex-start, center);
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        /* identical to box height */
 
-// .Add-Folder-btnPlus{
-//     display: flex;
-//     padding-left: 20px;
-//     p{
-//         padding-top: 2px;
-//     }
-// }
 
-// .btnPlus{
-//     width: 20px;
-//     height: 20px;
-//     padding-right: 15px;
-// }
+        /* Font/Primary */
 
-// .panel2BTN2{
-//     width: 180px;
-//     height: 40px;
-//     background: #F04438;
-//     border-radius: 4px;
-//     border: none;
-//     color: white;
-// }
+        color: #2E3B52;
+    }
+    &_fileCOUnT{
+        @include flexElement(flex-start, center);
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        /* identical to box height */
 
-// .Upload-File-btnUpl{
-//     display: flex;
-//     padding-left: 20px;
-//     padding-top: 10px;
-// }   
 
-// .btnUpl{
-//     width: 30px;
-//     height: 30px;
-//     padding-right: 10px;
-// }
+        /* Font/Primary */
 
-// table, td {
-//     border: 1px solid black;
-// }
+        color: #2E3B52;
+        width: 176px;
+    }
+    &_dateCreated{
+        @include flexElement(flex-start, center);
+        width: 166px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        /* identical to box height */
 
-// .greyRow {
-//     background: gray;
-// }
 
-// .files {
-//     &_tdCheck {
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         width: 50px;
-//     }
-//     &_td-type {
-//         width: 150px;
-//     }
-// }
+        /* Font/Primary */
 
+        color: #2E3B52;
+    }
+    &_date{
+        @include flexElement(flex-start, center);
+        width: 143px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        /* identical to box height */
+
+
+        /* Font/Primary */
+
+        color: #2E3B52;
+    }
+    &_DL{
+        width: 70px;
+        @include flexElement(flex-start, center);
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        /* identical to box height */
+
+
+        /* Font/Primary */
+
+        color: #2E3B52;
+    }
+    &_SIZE{
+        width: 70px;
+        @include flexElement(flex-start, center);
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        /* identical to box height */
+
+
+        /* Font/Primary */
+
+        color: #2E3B52;
+    }
+    &_ACCESS{
+        width: 156px;
+        @include flexElement(flex-start, center);
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        /* identical to box height */
+
+
+        /* Font/Primary */
+
+        color: #2E3B52;
+    }
+    &_coma{
+        width: 70px;
+        @include flexElement(flex-start, center);
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        /* identical to box height */
+
+
+        /* Font/Primary */
+
+        color: #2E3B52;
+        svg{
+            width: 70px;
+            height: 8px;
+            
+        }
+    }
+    &_O{
+        width: 60px;
+        @include flexElement(flex-start, center);
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        /* identical to box height */
+
+
+        /* Font/Primary */
+
+        color: #2E3B52;
+    }
+    &_MB{
+        width: 70px;
+        @include flexElement(flex-start, center);
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        /* identical to box height */
+
+
+        /* Font/Primary */
+
+        color: #2E3B52;
+    }
+    &_btnPublic{
+        @include flexElement(flex-start, center);
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        /* identical to box height */
+
+
+        /* Font/Primary */
+
+        color: #2E3B52;
+        width: 100px;
+        height: 40px;
+        margin-left: 15px;
+    }
+    &_endSvg{
+        @include flexElement(space-around, center);
+        width: 100px;
+        height: 34px;
+        margin-left: 10px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        /* identical to box height */
+
+
+        /* Font/Primary */
+
+        color: #2E3B52;
+    }
+}

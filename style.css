@@ -43,7 +43,7 @@ body {
 }
 body main .files {
   width: 1200px;
-  height: 800px;
+  height: 790px;
   border: 1px solid black;
   filter: drop-shadow(0px 3px 6px rgba(75, 81, 91, 0.15)) drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.15));
 }
@@ -178,6 +178,7 @@ body main .files_panel_down_search {
   background: #DAE1EC;
   border-radius: 4px;
   margin-left: 80px;
+  margin-right: 36px;
 }
 body main .files_panel_down_search_inptSvg {
   width: 20px;
@@ -185,8 +186,8 @@ body main .files_panel_down_search_inptSvg {
   margin: 10px;
 }
 body main .files_panel_down_search_inptP {
-  width: 245px;
-  height: 17px;
+  width: 265px;
+  height: 30px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -204,43 +205,52 @@ body main .files_panel_down_btnContainer {
 body main .files_panel_down_btnContainer_btn1 {
   width: 94px;
   height: 40px;
-  border-radius: 4px;
   background: #DAE1EC;
+  border-radius: 4px;
+  margin-left: 0px;
   border: none;
-  margin: 40px;
+}
+body main .files_panel_down_btnContainer_btn1:focus {
+  outline: none;
+  border: none;
 }
 body main .files_panel_down_btnContainer_btn2 {
   width: 94px;
   height: 40px;
-  border-radius: 4px;
   background: #DAE1EC;
+  border-radius: 4px;
+  margin-left: 40px;
   border: none;
-  margin: 8px;
+}
+body main .files_panel_down_btnContainer_btn2:focus {
+  outline: none;
+  border: none;
 }
 body main .files_panel_down_btnContainer_btn3 {
   width: 94px;
   height: 40px;
-  border-radius: 4px;
   background: #DAE1EC;
+  border-radius: 4px;
+  margin-left: 30px;
   border: none;
-  margin: 6px;
+}
+body main .files_panel_down_btnContainer_btn3:focus {
+  outline: none;
+  border: none;
 }
 body main .files_panel_down_btnContainer_btn4 {
   width: 94px;
   height: 40px;
-  border-radius: 4px;
   background: #DAE1EC;
+  border-radius: 4px;
+  margin-left: 15px;
   border: none;
-  margin: 10px;
+}
+body main .files_panel_down_btnContainer_btn4:focus {
+  outline: none;
+  border: none;
 }
 body main .files_panel_down_btnContainer_btn5 {
-  width: 94px;
-  height: 40px;
-  border-radius: 4px;
-  background: #DAE1EC;
-  border: none;
-}
-body main .files_panel_down_btnContainer_btn6 {
   width: 94px;
   height: 40px;
   border-radius: 4px;
@@ -248,6 +258,273 @@ body main .files_panel_down_btnContainer_btn6 {
   border: none;
   margin: 15px;
   color: white;
+  margin-right: 12px;
+}
+body main .files_panel_down_btnContainer_btn5:focus {
+  outline: none;
+  border: none;
+}
+body main .files_table {
+  width: 100%;
+}
+body main .files_table tr {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+body main .files_table_greyRow {
+  height: 45px;
+  background: #F4F7FC;
+}
+body main .files_table_greyRow {
+  height: 45px;
+  background: none;
+}
+body main .files_table1 {
+  width: 100%;
+  background: #F4F7FC;
+}
+body main .files_table1 tr {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+body main .files_table1_greyRow {
+  height: 45px;
+  background: #F4F7FC;
+}
+body main .files_table1_greyRow {
+  height: 45px;
+  background: none;
+}
+
+.td {
+  height: 45px;
+}
+.td button {
+  width: 60px;
+  height: 17px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #0A65FF;
+  border-radius: 11px;
+  border: none;
+  color: white;
+}
+.td_Checkbox {
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.td_Checkbox input {
+  width: 20px;
+  height: 39px;
+}
+.td_type {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+  /* Font/Primary */
+  color: #2E3B52;
+}
+.td_name {
+  width: 318px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+  /* Font/Primary */
+  color: #2E3B52;
+}
+.td_fileCount {
+  width: 150px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+  /* Font/Primary */
+  color: #2E3B52;
+}
+.td_fileCOUnT {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+  /* Font/Primary */
+  color: #2E3B52;
+  width: 176px;
+}
+.td_dateCreated {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 166px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+  /* Font/Primary */
+  color: #2E3B52;
+}
+.td_date {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 143px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+  /* Font/Primary */
+  color: #2E3B52;
+}
+.td_DL {
+  width: 70px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+  /* Font/Primary */
+  color: #2E3B52;
+}
+.td_SIZE {
+  width: 70px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+  /* Font/Primary */
+  color: #2E3B52;
+}
+.td_ACCESS {
+  width: 156px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+  /* Font/Primary */
+  color: #2E3B52;
+}
+.td_coma {
+  width: 70px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+  /* Font/Primary */
+  color: #2E3B52;
+}
+.td_coma svg {
+  width: 70px;
+  height: 8px;
+}
+.td_O {
+  width: 60px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+  /* Font/Primary */
+  color: #2E3B52;
+}
+.td_MB {
+  width: 70px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+  /* Font/Primary */
+  color: #2E3B52;
+}
+.td_btnPublic {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+  /* Font/Primary */
+  color: #2E3B52;
+  width: 100px;
+  height: 40px;
+  margin-left: 15px;
+}
+.td_endSvg {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100px;
+  height: 34px;
+  margin-left: 10px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+  /* Font/Primary */
+  color: #2E3B52;
 }
 
 /*# sourceMappingURL=style.css.map */
