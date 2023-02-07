@@ -36,14 +36,113 @@
 
 body {
   width: 100%;
+  height: 2000px;
+}
+body .BGALL {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+}
+body .BGALL img {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+}
+body .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  margin-top: 40px;
+}
+body .logo_p1 {
+  font-family: "Comfortaa";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-right: 282px;
+}
+body .logo_p2 {
+  font-family: "Comfortaa";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 22px;
+  color: #FFFFFF;
+  margin-right: 69px;
+}
+body .logo_p3 {
+  width: 132px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13.4237px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-left: 47px;
+}
+body .logo button {
+  width: 132px;
+  height: 36px;
+  background: #FFFFFF;
+  border-radius: 30px;
+  border: none;
+}
+body .logo button p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13.4237px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  color: #BB6DF3;
+}
+body .files1 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 59px;
+  margin-top: 270px;
+}
+body .files1_top1 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 72px;
+  line-height: 70px;
+  letter-spacing: 0.405em;
+  text-transform: uppercase;
+  color: #3B668D;
+}
+body .files1_top2 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: 0.905em;
+  text-transform: uppercase;
+  color: #3B668D;
+  margin-top: 15px;
+}
+body main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 809px;
 }
 body main .files {
   width: 1200px;
-  height: 790px;
+  height: 809px;
   border: 1px solid black;
   filter: drop-shadow(0px 3px 6px rgba(75, 81, 91, 0.15)) drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.15));
 }
@@ -296,6 +395,93 @@ body main .files_table1_greyRow {
 body main .files_table1_greyRow {
   height: 45px;
   background: none;
+}
+body footer {
+  width: 100%;
+  height: 900.72px;
+}
+body footer .footerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body footer .footerContainer_footerBlock1 {
+  width: 500px;
+  height: 500px;
+  margin-top: 400px;
+}
+body footer .footerContainer_footerBlock1_About-us {
+  width: 225px;
+  height: 54px;
+  font-family: "Comfortaa";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 54px;
+  color: #FFFFFF;
+}
+body footer .footerContainer_footerBlock1_text-1 {
+  width: 418px;
+  height: 283px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  color: #FFFFFF;
+}
+body footer .footerContainer_footerBlock2 {
+  width: 500px;
+  height: 500px;
+  margin-top: 400px;
+}
+body footer .footerContainer_footerBlock2_Featured-links {
+  width: 357px;
+  height: 54px;
+  font-family: "Comfortaa";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 54px;
+  color: #FFFFFF;
+}
+body footer .footerContainer_footerBlock2_footerA {
+  display: flex;
+  flex-direction: column;
+  width: 418px;
+  height: 248px;
+}
+body footer .footerContainer_footerBlock2_footerA_text-2 {
+  width: 418px;
+  height: 283px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  color: #FFFFFF;
+}
+body footer .footerContainer_footerBlock3 {
+  width: 500px;
+  height: 500px;
+  margin-top: 400px;
+}
+body footer .footerContainer_footerBlock3_Contact-us {
+  width: 274px;
+  height: 54px;
+  font-family: "Comfortaa";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 54px;
+  color: #FFFFFF;
+}
+body footer .footerContainer_footerBlock3_text-3 {
+  width: 285px;
+  height: 280px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  color: #FFFFFF;
 }
 
 .td {
